@@ -1,0 +1,22 @@
+<div class="main">
+  <h1>Employee Details</h1>
+<table>
+  <tr>
+    <th>ID</th>
+    <th>Name</th>
+    <th>Position</th>
+    <th>Department</th>
+    <th>Salary</th>
+    <th>Hire-Date</th>
+  </tr>
+  <tr *ngFor="let users of user">
+    <td>{{users.id}}</td>
+    <td>{{users.name}}</td>
+    <td>{{users.position}}</td>
+    <td>{{users.department}}</td>
+    <td>{{users.salary}}</td>
+    <td>{{users.hire_date}}</td>
+    <td><button>edit</button></td>
+  </tr>
+</table>
+</div>
