@@ -1,1 +1,27 @@
-<p>child works!</p>
+<form (ngSubmit)="submitForm()" *ngIf="selectedUser updateUser">
+    <label>ID:</label>
+    <input type="text" [(ngModel)]="selectedUser.id" name="id" disabled>
+    
+    <label>Name:</label>
+    <input type="text" [(ngModel)]="selectedUser.name" name="name">
+    
+    <label>Username:</label>
+    <input type="text" [(ngModel)]="selectedUser.username" name="username">
+    
+    <label>Email:</label>
+    <input type="email" [(ngModel)]="selectedUser.email" name="email">
+    
+    <label>Street:</label>
+    <input type="text" [(ngModel)]="selectedUser.address.street" name="street">
+    
+    <label>City:</label>
+    <input type="text" [(ngModel)]="selectedUser.address.city" name="city">
+    
+    <label>Zipcode:</label>
+    <input type="text" [(ngModel)]="selectedUser.address.zipcode" name="zipcode">
+    
+    <label>Phone:</label>
+    <input type="text" [(ngModel)]="selectedUser.phone" name="phone">
+    <button type="submit" class="btn-submit">Submit</button>
+  </form>
+  

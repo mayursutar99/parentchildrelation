@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-child',
@@ -6,5 +6,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./child.component.scss']
 })
 export class ChildComponent {
-
+  @Input() selectedUser: any;
+  @Output() updateUser = new EventEmitter<any>();
+  submitForm() {
+    this.updateUser.emit(this.selectedUser);
+  }
 }

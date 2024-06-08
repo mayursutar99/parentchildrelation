@@ -7,10 +7,20 @@ import { UserdetailsService } from './services/userdetails.service';
 })
 export class AppComponent {
   title = 'practicechildparent';
-  user:any;
+  users:any;
+  selectedUser: any;
+  isFormVisible = false;
   constructor(private userdata:UserdetailsService){
     userdata.userDetails().subscribe((data)=>{
-      this.user=data;
+      this.users=data;
   });
+  }
+  editUser(user: any) {
+    this.selectedUser = user;
+    this.isFormVisible=true;
+  }
+  updateUser(updatedUser: any) {
+    this.selectedUser = updatedUser;
+    this.isFormVisible=false;
   }
 }

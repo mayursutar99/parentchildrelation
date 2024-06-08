@@ -9,6 +9,6 @@ export class UserdetailsService {
 
   }
   userDetails(){
-    return this.user.get('https://mocki.io/v1/506a4051-f31c-4d70-8fce-e9e83e8b4394');
+    return this.user.get('https://jsonplaceholder.typicode.com/users');
   }
 }
